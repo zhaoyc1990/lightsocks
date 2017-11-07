@@ -1,12 +1,12 @@
 FROM alpine:3.6
 
-LABEL maintainer="mritd <mritd1234@gmail.com>"
+LABEL maintainer="zhaoyc <zhaoyanchang456@gmail.com>"
 
 ARG TZ="Asia/Shanghai"
 
 ENV TZ ${TZ}
-ENV LIGHTSOCKS_VERSION 1.0.3
-ENV LIGHTSOCKS_DOWNLOAD_URL https://github.com/gwuhaolin/lightsocks/releases/download/${LIGHTSOCKS_VERSION}/lightsocks_${LIGHTSOCKS_VERSION}_linux_amd64.tar.gz
+ENV LIGHTSOCKS_VERSION 1.0.6
+ENV LIGHTSOCKS_DOWNLOAD_URL https://github.com/zhaoyc1990/lightsocks/releases/download/${LIGHTSOCKS_VERSION}/lightsocks_${LIGHTSOCKS_VERSION}_linux_amd64.tar.gz
 
 RUN apk upgrade --update \
     && apk add bash tzdata curl tar \
