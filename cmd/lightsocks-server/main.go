@@ -5,7 +5,6 @@ import (
 	"github.com/gwuhaolin/lightsocks/cmd"
 	"github.com/gwuhaolin/lightsocks/core"
 	"github.com/gwuhaolin/lightsocks/server"
-	"github.com/phayes/freeport"
 	"log"
 	"net"
 )
@@ -16,11 +15,8 @@ func main() {
 	log.SetFlags(log.Lshortfile)
 
 	// 服务端监听端口随机生成
-	port, err := freeport.GetFreePort()
-	if err != nil {
-		// 随机端口失败就采用 7448
-		port = 7448
-	}
+	port := 7448
+
 	// 默认配置
 	config := &cmd.Config{
 		ListenAddr: fmt.Sprintf(":%d", port),

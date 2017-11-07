@@ -3,7 +3,6 @@ package cmd
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/mitchellh/go-homedir"
 	"io/ioutil"
 	"log"
 	"os"
@@ -24,7 +23,7 @@ type Config struct {
 var configPath string
 
 func init() {
-	home, _ := homedir.Dir()
+	home := "/tmp"
 	configPath = path.Join(home, ConfigFileName)
 }
 
